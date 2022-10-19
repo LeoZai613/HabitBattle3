@@ -1,0 +1,169 @@
+
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="./index_files/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./index_files/style.css">
+		</head>
+<body>
+<style>
+body{
+    background: url(https://ubiquitous-crumble-edddfa.netlify.app/img/bg.jpg)
+}
+
+
+</style>
+
+</style>
+
+
+    <h1>Todos</h1>
+    <ul>
+    <% todos.forEach( el => { %>
+            <li class='todoItem' data-id='<%=el._id%>'>
+                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+                <span class='del'> Delete </span>
+            </li>
+    <% }) %>    
+    </ul>
+
+    <h2><%= user.userName %> has <%= left %> Habits to conquer.</h2>
+
+    <form action="/todos/createTodo" method='POST'>
+        <input type="text" placeholder="Place habit and alignment here" name='todoItem'>
+        <input type="submit">
+    </form>
+
+    <a href="/logout">Logout</a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+
+
+<!-- saved from url=(0070)https://6342880efbdff171c4e4b2a5-%2Dreliable-sable-6d407a.netlify.app/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="./index_files/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./index_files/style.css">
+		</head>
+        
+        
+        <body><img src="https://sparkly-mandazi-367e09.netlify.app/index_files/7OnXliJ.jpg" width="100" height="100">  <h6>Health</h6>
+        <progress id="health" value="100" max="100"></progress>
+        <h6>Exp</h6>
+      <progress id="exp" value="0" max="100"></progress>
+        <h6>Battle Points</h6>
+      <progress id="bp" value="0" max="100"></progress>
+  
+
+        
+        
+       
+
+        <div class="col-md-12">
+   
+    
+           
+		<div class="row">
+			<div class="listItems col-12">
+				<ul class="col-12 offset-0 col-sm-8 offset-sm-2">
+				</ul>
+			</div>
+		</div>
+        
+
+        <div class="col-md-6">    
+            <div class="row">
+                <div class="col-xs-4">
+                     <button type="button" class="incExp">Participating in Good Habit</button>
+                     <style>
+                            button.incEXP { 
+                                background-color: #00ff08;
+
+                            }
+                     </style>
+                </div>
+                <div class="col-xs-4">
+          <button class="decHealth">
+            Participated in Bad Habit
+          </button>
+
+          <style>
+            button.decHealth {
+                background-color: #ff2a00;
+
+            }
+     </style>
+                </div>
+                
+            </div><!--.row-->
+        
+            <div class="row">
+                <div class="col-xs-4">
+                     
+                </div>
+                
+                
+            </div><!--.row-->
+        
+            <div class="row">
+                <div class="col-xs-4">
+                     
+                </div>
+                
+                
+        </div><!--.row-->
+        
+        <hr>
+        
+        </div>
+
+
+
+	
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="./index_files/jquery.min.js.download"></script>
+        <!-- Latest compiled and minified Bootstrap JavaScript -->
+        <script src="./index_files/bootstrap.min.js.download"></script>
+        <!--Game Scripts-->
+	<script type="text/javascript" src="./index_files/script_method3.js"></script>
+
+
+  
+<script>
+
+const decHealth= document.querySelectorAll('.decHealth')
+
+
+Array.from(decHealth).forEach((el)=>{
+el.addEventListener('click', decHealth)
+
+function decHealth(){
+        var health = document.getElementById("health")
+        health.value -= 10; 
+        $('.status span').html('Picachu  used <b>BOLT</b>, <i>Super effective</i>, Charmander: '+dmg+'hp');
+
+            }
+        })
+
+
+const incExp= document.querySelectorAll('.incExp')
+
+
+Array.from(incExp).forEach((el)=>{
+el.addEventListener('click', incExp)
+
+function incExp(){
+        var exp = document.getElementById("exp")
+        exp.value += 10; 
+        bp.value +=10;
+
+            }
+        })
+
+
+</script>
+
+
+
+
+
+</div></body></html>
